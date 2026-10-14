@@ -34,7 +34,7 @@ class HashTable:
         self.backing_store[index].append([key, value])
         self.num_items += 1
 
-        if self.MAX_LOAD_FACTOR > self.num_items / self.slots:
+        if self.MAX_LOAD_FACTOR < self.num_items / self.slots:
             self._resize()
 
     # return the value associated with the key
