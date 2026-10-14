@@ -55,7 +55,9 @@ class HashTable:
             if pair [0] == key:
                 chain.remove(pair)
                 self.num_items -= 1
-                return
+                return True
+
+        return False
         
     # update the hash table based on GROWTH_FACTOR
     # make sure to move everything over to the new table
